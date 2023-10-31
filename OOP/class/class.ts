@@ -27,14 +27,17 @@ console.log(lsj.introduce());
 class Client extends Person {
   phone: string;
 
-  constructor(name: string, email: string, phone: string, address: string) {
-    super(name, email, address);
+  constructor(name: string, email: string, phone: string, birthday: string) {
+    super(name, email, birthday);
 
     this.phone = phone;
   }
+  show() {
+    return super.introduce();
+  }
 }
 
-const lsj2 = new Client("lsj", "lsj02022@gmail.com", "010-0000-0000", "서울");
+const lsj2 = new Client("lsj", "lsj02022@gmail.com", "2-2-06", "서울");
 lsj.introduce();
 
 // lsj2가 실행되는 순서
